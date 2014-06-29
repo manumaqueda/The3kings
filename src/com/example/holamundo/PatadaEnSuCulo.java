@@ -1,7 +1,6 @@
 package com.example.holamundo;
 import android.content.Intent;
 import android.widget.*;
-
 import android.support.v7.app.ActionBarActivity;
 //import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
@@ -14,7 +13,7 @@ import android.view.ViewGroup;
 //import android.os.Build;
 
 public class PatadaEnSuCulo extends ActionBarActivity {
-
+    String entrada = "";
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -23,12 +22,16 @@ public class PatadaEnSuCulo extends ActionBarActivity {
 	    String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
 
 	    // Create the text view
+	 
+	 // Create the text view
 	    TextView textView = new TextView(this);
 	    textView.setTextSize(40);
 	    textView.setText(message);
-
+ 
 	    // Set the text view as the activity layout
 	    setContentView(textView);
+	   
+
 
 	}
 
