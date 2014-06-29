@@ -30,6 +30,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.holamundo.MainActivity" />
         </activity>
+        <activity
+            android:name="com.example.holamundo.MainActivity2"
+            android:label="@string/title_activity_main_activity2"
+            android:parentActivityName="com.example.holamundo.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.holamundo.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

@@ -10,16 +10,18 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
+import android.view.ViewGroup;  
 //import android.os.Build;
 
 public class MainActivity extends ActionBarActivity {
+	
+	
 	public final static String EXTRA_MESSAGE = "com.HolaMundo.PŽgale una patada en el culo a Felipe";
 	/** Called when the user clicks the Send button */
 	public void sendMessage(View view) {
 	    // Do something in response to button
 		Intent intent = new Intent(this, PatadaEnSuCulo.class);
-	    EditText editText = (EditText) findViewById(R.id.editText1);
+		EditText editText = (EditText) findViewById(R.id.editText1);
 	    String message = editText.getText().toString();
 	    intent.putExtra(EXTRA_MESSAGE, message);
 	    startActivity(intent);
