@@ -1,75 +1,65 @@
 package com.example.holamundo;
-import android.content.Intent;
+
+import android.app.ListActivity;
+
 import android.widget.*;
-import android.support.v7.app.ActionBarActivity;
+
 //import android.support.v7.app.ActionBar;
-import android.support.v4.app.Fragment;
+
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
+
 import android.view.View;
-import android.view.ViewGroup;
+
 //import android.os.Build;
 
-public class PatadaEnSuCulo extends ActionBarActivity {
-    String entrada = "";
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-	    // Get the message from the intent
-	    Intent intent = getIntent();
-	    String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
+public class PatadaEnSuCulo extends ListActivity{
 
-	    // Create the text view
-	 
-	 // Create the text view
-	    TextView textView = new TextView(this);
-	    textView.setTextSize(40);
-	    textView.setText(message);
- 
-	    // Set the text view as the activity layout
-	    setContentView(textView);
-	   
+	TextView content;
+    
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+    
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_patada_en_su_culo);
+        
+        
+        content = (TextView)findViewById(R.id.output);
+        
+        //listView = (ListView) findViewById(R.id.list);
+        String[] values = new String[] { "AigüesTortes i Estany de Sant Maurice", "Archipielago de la Cabrera", "Cabañeros",
+          "Doñana", "Garajonay", "Islas Atlánticas", "Montfragüe", "Ordesa y Monte Perdido", "Picos de Europa", "Sierra de Guadarrama", 
+          "Sierra Nevada", "Tablas de Daimiel", "Teide", "Timanfaya"};
+
+        // Define a new Adapter
+        // First parameter - Context
+        // Second parameter - Layout for the row
+        // Third - the Array of data
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+                android.R.layout.simple_list_item_1, values);
 
 
-	}
+        // Assign adapter to List
+        setListAdapter(adapter); 
+   }
 
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
+    
+  @Override
+  protected void onListItemClick(ListView l, View v, int position, long id) {
+        
+        super.onListItemClick(l, v, position, id);
 
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.patada_en_su_culo, menu);
-		return true;
-	}
-
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		// Handle action bar item clicks here. The action bar will
-		// automatically handle clicks on the Home/Up button, so long
-		// as you specify a parent activity in AndroidManifest.xml.
-		int id = item.getItemId();
-		if (id == R.id.action_settings) {
-			return true;
-		}
-		return super.onOptionsItemSelected(item);
-	}
-
-	/**
-	 * A placeholder fragment containing a simple view.
-	 */
-	public static class PlaceholderFragment extends Fragment {
-
-		public PlaceholderFragment() {
-		}
-
-		@Override
-		public View onCreateView(LayoutInflater inflater, ViewGroup container,
-				Bundle savedInstanceState) {
-			View rootView = inflater.inflate(
-					R.layout.fragment_patada_en_su_culo, container, false);
-			return rootView;
-		}
-	}
-
+           // ListView Clicked item index
+           int itemPosition     = position;
+           
+           // ListView Clicked item value
+           String  itemValue    = (String) l.getItemAtPosition(position);
+              
+           content.setText("Click : \n  Position :"+itemPosition+"  \n  ListItem : " +itemValue);
+           
+  }
 }
+
+	
+
+

@@ -9,12 +9,13 @@
     <string name="edit_message"> Edite su mensaje </string>
     <string name="prueba_imagen">Prueba Imagen </string>
     <string name="layout">Esta es mi layout</string>
-    <string android:id="@+id/rey" name="Rey" android:layout_width="wrap_content" android:layout_height="wrap_content">Esto es una página de prueba</string>
+    <string android:id="@+id/pagina_prueba" name="paginaPrueba" android:layout_width="wrap_content" android:layout_height="wrap_content">Esto es una página de prueba</string>
     <string name="title_activity_patada_en_su_culo">PatadaEnSuCulo</string>
     <string name="title_activity_main_activity2">MainActivity2</string>
     <string name="hello_world">Hello world!</string>
-    <string name="title_section1">Section 1</string>
-    <string name="title_section2">Section 2</string>
+    <string name="PasaListado">Listado de Parques</string>
+    <string name="PasaMapa">Mapa de Parques</string>
     <string name="title_section3">Section 3</string>
+    <string name="title_activity_mapa__parques">Mapa_Parques</string>
 
 </resources>

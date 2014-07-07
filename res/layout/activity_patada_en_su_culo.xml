@@ -2,12 +2,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     tools:context="com.example.holamundo.PatadaEnSuCulo" >
-	<ImageView 
-	    android:id = "@+id/imagen"
-	    android:contentDescription="@string/prueba_imagen"
-	    android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src = "@drawable/parques_ministerio" />
-</LinearLayout>
+
+    <TextView android:id="@+id/output"
+                android:background="#758AA7" 
+                android:layout_height="wrap_content"
+                android:padding="1px"
+                android:textColor="#ffffff"
+                android:text="Click : " 
+                android:layout_width="fill_parent" />
+    
+	<ListView
+	    android:id="@android:id/list"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:drawSelectorOnTop="true" >
+
+        </ListView>
+	
+	</LinearLayout>
