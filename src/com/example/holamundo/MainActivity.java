@@ -1,7 +1,6 @@
 package com.example.holamundo;
 import android.content.Intent;
 import android.widget.EditText;
-
 import android.support.v7.app.ActionBarActivity;
 //import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
@@ -24,6 +23,7 @@ public class MainActivity extends ActionBarActivity {
 		EditText editText = (EditText) findViewById(R.id.editText1);
 	    String message = editText.getText().toString();
 	    intent.putExtra(EXTRA_MESSAGE, message);
+	    System.out.print("Pasamos a la p‡gina de listados con este mensaje");
 	    startActivity(intent);
 
 	}
@@ -33,6 +33,7 @@ public class MainActivity extends ActionBarActivity {
 		EditText editText = (EditText) findViewById(R.id.editText1);
 	    String message = editText.getText().toString();
 	    intent.putExtra(EXTRA_MESSAGE, message);
+	    System.out.print("Pasamos a la p‡gina de mapa con este mensaje");
 	    startActivity(intent);
 
 	}
@@ -47,6 +48,7 @@ public class MainActivity extends ActionBarActivity {
                     .add(R.id.container, new PlaceholderFragment())
                     .commit();
         }
+        System.out.println("Hemos entrado en la actividad primera");
     }
 
 

@@ -1,13 +1,9 @@
 package com.example.holamundo;
 
 import android.app.ListActivity;
-
+import android.content.Intent;
 import android.widget.*;
-
-//import android.support.v7.app.ActionBar;
-
 import android.os.Bundle;
-
 import android.view.View;
 
 //import android.os.Build;
@@ -56,6 +52,13 @@ public class PatadaEnSuCulo extends ListActivity{
            String  itemValue    = (String) l.getItemAtPosition(position);
               
            content.setText("Click : \n  Position :"+itemPosition+"  \n  ListItem : " +itemValue);
+       /*
+           Intent intent = new Intent(this, ActividadEdu.class);
+   			String message = itemValue;
+   			
+   			intent.putExtra(EXTRA_MESSAGE, message);
+   			startActivity(intent);*/
+
            
   }
 }

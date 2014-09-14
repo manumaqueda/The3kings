@@ -240,7 +240,7 @@ int id action_context_bar 0x7f05001d
 int id action_menu_divider 0x7f050016
 int id action_menu_presenter 0x7f050017
 int id action_mode_close_button 0x7f050024
-int id action_settings 0x7f050043
+int id action_settings 0x7f050044
 int id activity_chooser_view_content 0x7f050025
 int id always 0x7f05000b
 int id beginning 0x7f050011
@@ -263,9 +263,9 @@ int id homeAsUp 0x7f050005
 int id icon 0x7f05002a
 int id ifRoom 0x7f05000a
 int id image 0x7f050027
-int id imageView1 0x7f050042
 int id listMode 0x7f050001
 int id list_item 0x7f050029
+int id mapaParques 0x7f050043
 int id middle 0x7f050012
 int id never 0x7f050009
 int id none 0x7f050010
@@ -274,6 +274,7 @@ int id output 0x7f050041
 int id progress_circular 0x7f050018
 int id progress_horizontal 0x7f050019
 int id radio 0x7f05002f
+int id rotateMapa 0x7f050042
 int id search_badge 0x7f050032
 int id search_bar 0x7f050031
 int id search_button 0x7f050033
