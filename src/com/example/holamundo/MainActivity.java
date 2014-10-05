@@ -25,7 +25,8 @@ public class MainActivity extends ActionBarActivity {
 	    intent.putExtra(EXTRA_MESSAGE, message);
 	    System.out.print("Pasamos a la p‡gina de listados con este mensaje");
 	    startActivity(intent);
-	    // Main Activity MAnu
+	    // Main Activity MAnu 
+	    System.out.println("Perra vieja");
 	} 
 	public void pasaAMapa(View view) {
 	    // Do something in response to button
