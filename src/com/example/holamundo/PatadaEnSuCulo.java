@@ -1,10 +1,11 @@
 package com.example.holamundo;
 
 import android.app.ListActivity;
-import android.content.Intent;
-import android.widget.*;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.TextView;
 
 //import android.os.Build;
 

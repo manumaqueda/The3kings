@@ -1,23 +1,19 @@
 package com.example.holamundo;
 
-import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBar;
-import android.support.v4.app.Fragment;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Matrix;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v7.app.ActionBarActivity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
 import android.widget.ImageView;
-import android.os.Build;
-import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.Color;
 //import android.graphics.drawable.BitmapDrawable;
-import android.graphics.BitmapFactory;
-import android.graphics.Matrix;/*
+/*
 import java.it.sephiroth.android.library.imagezoom.ImageViewTouch;
 import it.sephiroth.android.library.imagezoom.ImageViewTouch.OnImageViewTouchDoubleTapListener;
 import it.sephiroth.android.library.imagezoom.ImageViewTouch.OnImageViewTouchSingleTapListener;
@@ -25,18 +21,6 @@ import it.sephiroth.android.library.imagezoom.ImageViewTouchBase;
 import it.sephiroth.android.library.imagezoom.ImageViewTouchBase.DisplayType;
 import it.sephiroth.android.library.imagezoom.ImageViewTouchBase.OnDrawableChangeListener;
 import it.sephiroth.android.library.imagezoom.test.utils.DecodeUtils;*/
-import android.app.Activity;
-import android.content.res.Configuration;
-import android.database.Cursor;
-import android.graphics.drawable.Drawable;
-import android.net.Uri;
-import android.provider.MediaStore.Images;
-import android.util.Log;
-
-import android.view.View.OnClickListener;
-import android.view.Window;
-import android.widget.Button;
-import android.widget.Toast;
 
 public class Mapa_Parques extends ActionBarActivity {
 	@Override
