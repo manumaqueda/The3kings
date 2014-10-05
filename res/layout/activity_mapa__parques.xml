@@ -3,5 +3,5 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.holamundo.Mapa_Parques"
+    tools:context="com.Parques_Nacionales.Mapa_Parques"
     tools:ignore="MergeRootFrame" />

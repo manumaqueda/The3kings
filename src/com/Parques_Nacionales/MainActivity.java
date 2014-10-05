@@ -1,4 +1,6 @@
-package com.example.holamundo;
+package com.Parques_Nacionales;
+import com.Parques_Nacionales.R;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;

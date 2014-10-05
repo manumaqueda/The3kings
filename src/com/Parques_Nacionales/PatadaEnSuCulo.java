@@ -1,4 +1,6 @@
-package com.example.holamundo;
+package com.Parques_Nacionales;
+
+import com.Parques_Nacionales.R;
 
 import android.app.ListActivity;
 import android.os.Bundle;

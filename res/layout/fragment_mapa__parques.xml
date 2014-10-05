@@ -3,7 +3,7 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    tools:context="com.example.holamundo.Mapa_Parques$PlaceholderFragment"
+    tools:context="com.Parques_Nacionales.Mapa_Parques$PlaceholderFragment"
     class  ="com.example.holamundo.Mapa_Parques$PlaceholderFragment">
 <!--  
     <ImageButton
