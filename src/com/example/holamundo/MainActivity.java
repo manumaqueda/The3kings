@@ -36,7 +36,7 @@ public class MainActivity extends ActionBarActivity {
 	    intent.putExtra(EXTRA_MESSAGE, message);
 	    System.out.print("Pasamos a la p‡gina de mapa con este mensaje");
 	    startActivity(intent);
-
+	    System.out.println("Este comentario es muy importante.");
 	}
 
     @Override
