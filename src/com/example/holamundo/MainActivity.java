@@ -26,7 +26,7 @@ public class MainActivity extends ActionBarActivity {
 	    System.out.print("Pasamos a la p‡gina de listados con este mensaje");
 	    startActivity(intent);
 
-	}
+	} 
 	public void pasaAMapa(View view) {
 	    // Do something in response to button
 		Intent intent = new Intent(this, Mapa_Parques.class);
