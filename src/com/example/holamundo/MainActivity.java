@@ -1,15 +1,15 @@
 package com.example.holamundo;
 import android.content.Intent;
-import android.widget.EditText;
-import android.support.v7.app.ActionBarActivity;
-//import android.support.v7.app.ActionBar;
-import android.support.v4.app.Fragment;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v7.app.ActionBarActivity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;  
+import android.view.ViewGroup;
+import android.widget.EditText;
+//import android.support.v7.app.ActionBar;
 //import android.os.Build;
 
 public class MainActivity extends ActionBarActivity {
@@ -32,6 +32,7 @@ public class MainActivity extends ActionBarActivity {
 		Intent intent = new Intent(this, Mapa_Parques.class);
 		EditText editText = (EditText) findViewById(R.id.editText1);
 	    String message = editText.getText().toString();
+	    System.out.println("Cera");
 	    intent.putExtra(EXTRA_MESSAGE, message);
 	    System.out.print("Pasamos a la p‡gina de mapa con este mensaje");
 	    startActivity(intent);
