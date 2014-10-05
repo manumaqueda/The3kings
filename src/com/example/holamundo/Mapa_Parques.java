@@ -53,7 +53,7 @@ public class Mapa_Parques extends ActionBarActivity {
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-
+		// Buenos dias
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.mapa__parques, menu);
 		return true;
