@@ -1,0 +1,30 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context="com.example.holamundo.Mapa_Parques$PlaceholderFragment"
+    class  ="com.example.holamundo.Mapa_Parques$PlaceholderFragment">
+<!--  
+    <ImageButton
+        android:id="@+id/imageButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/abc_ic_search" />
+-->
+
+    <Button
+        android:id="@+id/rotateMapa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="rotaMapa"
+        android:text="Rotate Image" />
+
+    <ImageView
+        android:id="@+id/mapaParques"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="mapa de los parques"
+        android:src="@drawable/parques_ministerio" />
+
+</LinearLayout>
