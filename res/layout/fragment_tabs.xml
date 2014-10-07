@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+    
+    <TabHost
+        android:id="@+id/tabhost"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            style="@style/AppTheme"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#AAAAAA" >
+            </TabWidget>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+ 
+               <include
+                    android:id="@+id/Info"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent" 
+                    layout="@layout/tab_info" >
+                </include>
+ 
+               <include
+                    android:id="@+id/Fauna"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent" 
+                    layout="@layout/tab_fauna" >
+                </include>
+ 
+               <include
+                    android:id="@+id/Flora"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent" 
+                    layout="@layout/tab_flora" >
+                </include>
+               
+               <include
+                    android:id="@+id/Otros"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent" 
+                    layout="@layout/tab_otros" >
+                </include>
+
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+ 
+</RelativeLayout>
