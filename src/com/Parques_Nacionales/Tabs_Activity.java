@@ -2,13 +2,14 @@ package com.Parques_Nacionales;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.MotionEvent;
 import android.widget.TabHost;
 import android.widget.TabHost.TabSpec;
 
-public class TabsActivity extends Activity {
-	
-    private float primerX;
+
+public class Tabs_Activity extends ActionBarActivity {
+	private float primerX;
 
 	protected void onCreate(Bundle savedInstanceState) {
         

@@ -14,7 +14,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.Parques_Nacionales.MainActivity"
+            android:name=".MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,28 +23,35 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.Parques_Nacionales.PatadaEnSuCulo"
+            android:name=".PatadaEnSuCulo"
             android:label="@string/title_activity_patada_en_su_culo"
-            android:parentActivityName="com.Parques_Nacionales.MainActivity" >
+            android:parentActivityName=".MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.holamundo.MainActivity" />
         </activity>
         <activity
-            android:name="com.Parques_Nacionales.MainActivity2"
-            android:label="@string/title_activity_main_activity2"
-            android:parentActivityName="com.Parques_Nacionales.MainActivity" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.holamundo.MainActivity" />
-        </activity>
-        <activity
-            android:name="com.Parques_Nacionales.Mapa_Parques"
+            android:name=".Mapa_Parques"
             android:label="@string/title_activity_mapa__parques"
-            android:parentActivityName="com.Parques_Nacionales.MainActivity" >
+            android:parentActivityName=".MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.holamundo.MainActivity" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name=".Tabs_Activity"
+            android:label="@string/title_activity_tabs_"
+            android:parentActivityName=".PatadaEnSuCulo" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.Parques_Nacionales.PatadaEnSuCulo" />
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
