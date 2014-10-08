@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.content.Intent;
+
 
 //import android.os.Build;
 
@@ -55,12 +57,12 @@ public class PatadaEnSuCulo extends ListActivity{
            String  itemValue    = (String) l.getItemAtPosition(position);
               
            content.setText("Click : \n  Position :"+itemPosition+"  \n  ListItem : " +itemValue);
-       /*
-           Intent intent = new Intent(this, ActividadEdu.class);
-   			String message = itemValue;
-   			
-   			intent.putExtra(EXTRA_MESSAGE, message);
-   			startActivity(intent);*/
+       
+           Intent intent = new Intent(this, Tabs_Activity.class);
+   		   String message = itemValue;
+   		   String EXTRA_MESSAGE = "Este es un mensaje extra";
+   		   intent.putExtra(EXTRA_MESSAGE, message);
+   		   startActivity(intent);
 
            
   }

@@ -11,7 +11,7 @@
     <string name="layout">Esta es mi layout</string>
     <string android:id="@+id/pagina_prueba" name="paginaPrueba" android:layout_width="wrap_content" android:layout_height="wrap_content">Esto es una página de prueba</string>
     <string name="title_activity_patada_en_su_culo">PatadaEnSuCulo</string>
-    <string name="title_activity_main_activity2">MainActivity2</string>
+    <string name="title_TabsActivity">TabsActivity</string>
     <string name="hello_world">Hello world!</string>
     <string name="PasaListado">Listado de Parques</string>
     <string name="PasaMapa">Mapa de Parques</string>
@@ -21,5 +21,6 @@
     <string name="Fauna">Soy la pestaña de Fauna</string>
     <string name="Flora">Soy la pestaña de Flora</string>
     <string name="Otros">Soy la pestaña de Otros</string>
+    <string name="title_activity_tabs_">Tabs_Activity</string>
 
 </resources>
