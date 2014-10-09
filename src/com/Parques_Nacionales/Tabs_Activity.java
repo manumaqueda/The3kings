@@ -1,7 +1,7 @@
 package com.Parques_Nacionales;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.view.MotionEvent;
 import android.widget.TabHost;
@@ -15,6 +15,9 @@ public class Tabs_Activity extends ActionBarActivity {
         
 		super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_tabs);
+        
+        ActionBar Actionbar=getSupportActionBar();
+        Actionbar.setTitle("Informaci—n del Parque");
         
         TabHost TabHost1 = (TabHost) findViewById(R.id.tabhost);
         TabHost1.setup();
