@@ -1,105 +1,89 @@
 package com.Parques_Nacionales;
 
-import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBar.Tab;
 import android.support.v7.app.ActionBarActivity;
-import android.view.MotionEvent;
-import android.widget.TabHost;
-import android.widget.TabHost.TabSpec;
-
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 
 public class Tabs_Activity extends ActionBarActivity {
-	private float primerX;
 
+	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-        
 		super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_tabs);
+		setContentView(R.layout.tabs_activity);
+		
+		ActionBar actionBar = getSupportActionBar();
+		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+		
+		//Crear la Pesta–a de Info
+		Tab tab1=actionBar.newTab();
+        tab1.setText("Info");
+        tab1.setTabListener(new TabsListener(this, FragmentInfo.class));
+        actionBar.addTab(tab1);
         
-        ActionBar Actionbar=getSupportActionBar();
-        Actionbar.setTitle("Informaci—n del Parque");
-        
-        TabHost TabHost1 = (TabHost) findViewById(R.id.tabhost);
-        TabHost1.setup();
-        
-        //Pesta–a de Info  
-        TabSpec spec1 = TabHost1.newTabSpec("tab_info");
-        spec1.setIndicator("", getResources().getDrawable(R.drawable.tabinfo));
-        spec1.setContent(R.id.Info);
-        TabHost1.addTab(spec1);
-               
-        //Pesta–a de Fauna  
-        TabSpec spec2 = TabHost1.newTabSpec("tab_fauna");
-        spec2.setIndicator("", getResources().getDrawable(R.drawable.tabfauna));
-        spec2.setContent(R.id.Fauna);
-        TabHost1.addTab(spec2);
-        
-        //Pesta–a de Flora  
-        TabSpec spec3 = TabHost1.newTabSpec("tab_flora");
-        spec3.setIndicator("", getResources().getDrawable(R.drawable.tabflora));
-        spec3.setContent(R.id.Flora);
-        TabHost1.addTab(spec3);
-                
-        //Pesta–a de Otros  
-        TabSpec spec4 = TabHost1.newTabSpec("tab_otros");
-        spec4.setIndicator("", getResources().getDrawable(R.drawable.tabotros));
-        spec4.setContent(R.id.Otros);
-        TabHost1.addTab(spec4);
-        
+        //Crear la Pesta–a de Fauna
+      	Tab tab2=actionBar.newTab();
+        tab2.setText("Fauna");
+        tab2.setTabListener(new TabsListener(this, FragmentFauna.class));
+        actionBar.addTab(tab2);
+              
+        //Crear la Pesta–a de Flora
+        Tab tab3=actionBar.newTab();
+        tab3.setText("Flora");
+        tab3.setTabListener(new TabsListener(this, FragmentFlora.class));
+        actionBar.addTab(tab3);
+              
+        //Crear la Pesta–a de Otros
+        Tab tab4=actionBar.newTab();
+        tab4.setText("Otros");
+        tab4.setTabListener(new TabsListener(this, FragmentOtros.class));
+        actionBar.addTab(tab4);
 	}
-	
-	public boolean onTouchEvent(MotionEvent touchevent) {
-    	
-    	switch (touchevent.getAction()) {
-    		
-    		//Se activa al tocar la pantalla
-    		case MotionEvent.ACTION_DOWN: {
-    			primerX = touchevent.getX();
-            break;
-    		}
-       
-    		//Se activa al dejar de tocar la pantalla
-    		case MotionEvent.ACTION_UP: {
 
-    			float actualX = touchevent.getX();
-			
-    			//Si va de izquierda a derecha
-    			if (primerX < actualX) {
-    				switchTabs(true);
-    			}
-           
-    			//Si va de derecha a izquierda
-    			if (primerX > actualX) {
-    				switchTabs(false);
-    			}
-            break;
-    		}
-        }
-        return false;
-    }
-    
-    public void switchTabs(boolean dir) {
-    	
-    	TabHost TabHost1 = (TabHost) findViewById(R.id.tabhost);
-    	
-    	//Mueve hacia la izquierda
-    	if (dir) {
-            if (TabHost1.getCurrentTab() == 0) {
-                TabHost1.setCurrentTab(TabHost1.getTabWidget().getTabCount() - 1);
-            }
-            else {
-            	TabHost1.setCurrentTab(TabHost1.getCurrentTab() - 1);
-            }
-        }
-        //Mueve hacia la derecha
-    	else {   
-        	if (TabHost1.getCurrentTab() != (TabHost1.getTabWidget().getTabCount() - 1)) {
-            	TabHost1.setCurrentTab(TabHost1.getCurrentTab() + 1);
-        	}
-            else {
-            	TabHost1.setCurrentTab(0);
-            }
-        }
-    }
-    
+	protected class TabsListener implements ActionBar.TabListener{
+		
+		private Fragment fragment;
+		
+		public <T> TabsListener (Activity activity, Class<T> cls){
+			fragment= Fragment.instantiate(activity, cls.getName());
+		}
+		
+		@Override
+		public void onTabReselected(Tab arg0, FragmentTransaction arg1) {
+			arg1.replace(android.R.id.content, fragment);	
+		}
+
+		@Override
+		public void onTabSelected(Tab arg0, FragmentTransaction arg1) {
+			arg1.replace(android.R.id.content, fragment);	
+		}
+
+		@Override
+		public void onTabUnselected(Tab arg0, FragmentTransaction arg1) {
+			arg1.remove(fragment);
+		}
+	}
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.tabs_, menu);
+		return true;
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		// Handle action bar item clicks here. The action bar will
+		// automatically handle clicks on the Home/Up button, so long
+		// as you specify a parent activity in AndroidManifest.xml.
+		int id = item.getItemId();
+		if (id == R.id.action_settings) {
+			return true;
+		}
+		return super.onOptionsItemSelected(item);
+	}
 }

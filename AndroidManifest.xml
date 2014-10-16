@@ -44,7 +44,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        
         <activity
             android:name=".Tabs_Activity"
             android:label="@string/title_activity_tabs_"
@@ -58,6 +57,22 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".FragmentInfo"
+            android:label="@string/title_activity_fragment_info" >
+        </activity>
+        <activity
+            android:name=".FragmentFauna"
+            android:label="@string/title_activity_fragment_fauna" >
+        </activity>
+        <activity
+            android:name=".FragmentFlora"
+            android:label="@string/title_activity_fragment_flora" >
+        </activity>
+        <activity
+            android:name=".FragmentOtros"
+            android:label="@string/title_activity_fragment_otros" >
         </activity>
     </application>
 

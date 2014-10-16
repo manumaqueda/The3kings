@@ -17,10 +17,14 @@
     <string name="PasaMapa">Mapa de Parques</string>
     <string name="title_section3">Section 3</string>
     <string name="title_activity_mapa__parques">Mapa_Parques</string>
-    <string name="Info">Soy la pestaña de Info</string>
-    <string name="Fauna">Soy la pestaña de Fauna</string>
-    <string name="Flora">Soy la pestaña de Flora</string>
-    <string name="Otros">Soy la pestaña de Otros</string>
+    <string name="tabinfo">Soy la Pestaña de Info</string>
+    <string name="tabfauna">Soy la Pestaña de Fauna</string>
+    <string name="tabflora">Soy la Pestaña de Flora</string>
+    <string name="tabotros">Soy la Pestaña de Otros</string>
     <string name="title_activity_tabs_">Tabs_Activity</string>
+    <string name="title_activity_fragment_info">FragmentInfo</string>
+    <string name="title_activity_fragment_fauna">FragmentFauna</string>
+    <string name="title_activity_fragment_flora">FragmentFlora</string>
+    <string name="title_activity_fragment_otros">FragmentOtros</string>
 
 </resources>

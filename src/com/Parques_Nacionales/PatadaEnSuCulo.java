@@ -67,7 +67,3 @@ public class PatadaEnSuCulo extends ListActivity{
            
   }
 }
-
-	
-
-
