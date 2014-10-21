@@ -11,7 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 public class Tabs_Activity extends ActionBarActivity {
-
+    //Manu Guapo
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -23,7 +23,7 @@ public class Tabs_Activity extends ActionBarActivity {
 		//Crear la Pesta–a de Info
 		Tab tab1=actionBar.newTab();
         tab1.setText("Info");
-        tab1.setTabListener(new TabsListener(this, FragmentInfo.class));
+        tab1.setTabListener(new TabsListener(this, Fragment.class));
         actionBar.addTab(tab1);
         
         //Crear la Pesta–a de Fauna
