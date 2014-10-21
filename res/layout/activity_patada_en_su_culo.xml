@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.Parques_Nacionales.PatadaEnSuCulo" >
+    tools:context="com.Parques_Nacionales.Listado_Parques" >
 
     <TextView android:id="@+id/output"
                 android:background="#758AA7" 

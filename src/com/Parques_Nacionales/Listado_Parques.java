@@ -23,7 +23,7 @@ public class Listado_Parques extends ListActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_patada_en_su_culo);
         
-        
+         
         content = (TextView)findViewById(R.id.output);
         
         //listView = (ListView) findViewById(R.id.list);

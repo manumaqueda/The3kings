@@ -23,7 +23,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".PatadaEnSuCulo"
+            android:name=".Listado_Parques"
             android:label="@string/title_activity_patada_en_su_culo"
             android:parentActivityName=".MainActivity" >
             <meta-data
@@ -47,7 +47,7 @@
         <activity
             android:name=".Tabs_Activity"
             android:label="@string/title_activity_tabs_"
-            android:parentActivityName=".PatadaEnSuCulo" >
+            android:parentActivityName=".Listado_Parques" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.Parques_Nacionales.PatadaEnSuCulo" />

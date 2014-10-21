@@ -21,7 +21,7 @@ public class MainActivity extends ActionBarActivity {
 	/** Called when the user clicks the Send button */
 	public void pasaAListado(View view) {
 	    // Do something in response to button
-		Intent intent = new Intent(this, PatadaEnSuCulo.class);
+		Intent intent = new Intent(this, Listado_Parques.class);
 		EditText editText = (EditText) findViewById(R.id.editText1);
 	    String message = editText.getText().toString();
 	    intent.putExtra(EXTRA_MESSAGE, message);
