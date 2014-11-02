@@ -23,31 +23,32 @@ public class Tabs_Activity extends ActionBarActivity {
 		//Crear la Pesta–a de Info
 		Tab tab1=actionBar.newTab();
         tab1.setText("Info");
-        tab1.setTabListener(new TabsListener(this, Fragment.class));
+        tab1.setTabListener(new TabsListener(this, FragmentInfo.class));
         actionBar.addTab(tab1);
         
         //Crear la Pesta–a de Fauna
       	Tab tab2=actionBar.newTab();
         tab2.setText("Fauna");
-        tab2.setTabListener(new TabsListener(this, FragmentFauna.class));
+        tab2.setTabListener(new TabsListener(this, FragmentInfo.class));
         actionBar.addTab(tab2);
               
         //Crear la Pesta–a de Flora
         Tab tab3=actionBar.newTab();
         tab3.setText("Flora");
-        tab3.setTabListener(new TabsListener(this, FragmentFlora.class));
+        tab3.setTabListener(new TabsListener(this, FragmentInfo.class));
         actionBar.addTab(tab3);
               
         //Crear la Pesta–a de Otros
         Tab tab4=actionBar.newTab();
         tab4.setText("Otros");
-        tab4.setTabListener(new TabsListener(this, FragmentOtros.class));
+        tab4.setTabListener(new TabsListener(this, FragmentInfo.class));
         actionBar.addTab(tab4);
 	}
 
-	protected class TabsListener implements ActionBar.TabListener{
+	protected static class TabsListener implements ActionBar.TabListener{
 		
 		private Fragment fragment;
+		static int pos;
 		
 		public <T> TabsListener (Activity activity, Class<T> cls){
 			fragment= Fragment.instantiate(activity, cls.getName());
@@ -55,12 +56,14 @@ public class Tabs_Activity extends ActionBarActivity {
 		
 		@Override
 		public void onTabReselected(Tab arg0, FragmentTransaction arg1) {
-			arg1.replace(android.R.id.content, fragment);	
+			arg1.replace(android.R.id.content, fragment);
+			pos = arg0.getPosition();
 		}
 
 		@Override
 		public void onTabSelected(Tab arg0, FragmentTransaction arg1) {
-			arg1.replace(android.R.id.content, fragment);	
+			arg1.replace(android.R.id.content, fragment);
+			pos = arg0.getPosition();
 		}
 
 		@Override
