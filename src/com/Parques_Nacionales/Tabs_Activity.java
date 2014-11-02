@@ -23,25 +23,25 @@ public class Tabs_Activity extends ActionBarActivity {
 		//Crear la Pesta–a de Info
 		Tab tab1=actionBar.newTab();
         tab1.setText("Info");
-        tab1.setTabListener(new TabsListener(this, FragmentInfo.class));
+        tab1.setTabListener(new TabsListener(this, FragmentTabs.class));
         actionBar.addTab(tab1);
         
         //Crear la Pesta–a de Fauna
       	Tab tab2=actionBar.newTab();
         tab2.setText("Fauna");
-        tab2.setTabListener(new TabsListener(this, FragmentInfo.class));
+        tab2.setTabListener(new TabsListener(this, FragmentTabs.class));
         actionBar.addTab(tab2);
               
         //Crear la Pesta–a de Flora
         Tab tab3=actionBar.newTab();
         tab3.setText("Flora");
-        tab3.setTabListener(new TabsListener(this, FragmentInfo.class));
+        tab3.setTabListener(new TabsListener(this, FragmentTabs.class));
         actionBar.addTab(tab3);
               
         //Crear la Pesta–a de Otros
         Tab tab4=actionBar.newTab();
         tab4.setText("Otros");
-        tab4.setTabListener(new TabsListener(this, FragmentInfo.class));
+        tab4.setTabListener(new TabsListener(this, FragmentTabs.class));
         actionBar.addTab(tab4);
 	}
 

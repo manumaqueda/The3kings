@@ -8,23 +8,29 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class FragmentInfo extends Fragment {
+public class FragmentTabs extends Fragment {
 	
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		
-		View tabcontent=inflater.inflate(R.layout.fragment_info, container, false); 
-		
 		switch (TabsListener.pos){
-			case '0':
-				tabcontent=inflater.inflate(R.layout.fragment_info, container, false);
-			case '1':
+			case 0:
+				View tabcontent=inflater.inflate(R.layout.fragment_info, container, false);
+				return tabcontent;
+			case 1:
 				tabcontent=inflater.inflate(R.layout.fragment_fauna, container, false);
-			case '2':
+				System.out.println(TabsListener.pos);
+				return tabcontent;
+			case 2:
 				tabcontent=inflater.inflate(R.layout.fragment_flora, container, false);
-			case '3':
+				return tabcontent;
+			case 3:
 				tabcontent=inflater.inflate(R.layout.fragment_otros, container, false);
+				return tabcontent;
+			default:
+				tabcontent=inflater.inflate(R.layout.fragment_info, container, false);
+				System.out.println(TabsListener.pos);
+				return tabcontent;
 		} 
-		return tabcontent;
 	}
 	
 }

@@ -59,7 +59,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".FragmentInfo"
+            android:name=".FragmentTabs"
             android:label="@string/title_activity_fragment_info" >
         </activity>
         <activity
