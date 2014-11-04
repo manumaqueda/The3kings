@@ -19,6 +19,7 @@ public class Tabs_Activity extends ActionBarActivity {
  		
 		ActionBar actionBar = getSupportActionBar();
 		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+		actionBar.setTitle(getIntent().getStringExtra("title"));
 		
 		//Crear la Pesta–a de Info
 		Tab tab1=actionBar.newTab();

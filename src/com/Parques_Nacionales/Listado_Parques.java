@@ -60,8 +60,7 @@ public class Listado_Parques extends ListActivity{
        
            Intent intent = new Intent(this, Tabs_Activity.class);
    		   String message = itemValue;
-   		   String EXTRA_MESSAGE = "Este es un mensaje extra";
-   		   intent.putExtra(EXTRA_MESSAGE, message);
+   		   intent.putExtra("title", message);
    		   startActivity(intent);
 
            
